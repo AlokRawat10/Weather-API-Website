@@ -1,0 +1,145 @@
+
+
+.main-content {
+    position: absolute;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    margin: 10% 0;
+    background: linear-gradient(0deg, black, rgb(48, 47, 47));
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.glow::before, .glow::after {
+    content:  '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #e6fb04, 
+    #ff6600, #00ff66, #00ffff, #ff00ff,
+     #ff0099, #6e0dd0, #ff3300, #899fff );
+    background-size: 400%;
+    border-radius: 15px;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    animation: animation 20s linear infinite ;
+
+}
+
+@keyframes animation {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+button{
+    margin: 20px;
+    border-radius: 10px;
+    height: 50px;
+    width: 100px;
+    border: none;
+    background: linear-gradient(145deg, #1e2024, #23272b);
+    box-shadow: 10px 10px 19px black,inset -10px -10px 19px #262a2e;
+    color:#ff014f;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #23272b, #1e2024);
+    box-shadow: 10px 10px 19px rgb(16, 13, 13),inset -10px -10px 19px #262a2e;
+    color:#ff014f;
+    transform: translateY(2px);
+}   
+
+
+
+h1 {
+    color: #ff014f;
+    text-shadow: 10px 10px 19px #1c1e22,inset -10px -10px 19px #262a2e;
+    font-size: 50px;
+}
+
+ input[type="text"], form button {
+    width: 40%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 0; /* Ensures vertical spacing */
+    box-shadow: 5px 5px 12px black,inset -5px -5px 12px #262a2e;
+    background-color: #191b1e;
+    border-radius: 6px;
+    border: 2px solid #191b1e;
+    color: white;
+}
+
+  input[type="text"]:focus,
+ textarea:focus {
+    border: 2px solid #ff014f;
+    outline: none; 
+}
+
+/* Container for the weather card */
+.weather-card {
+    background: #1c1e22;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    color: #fff;
+}
+
+/* Temperature display */
+.weather-card .temperature {
+    font-size: 60px;
+    font-weight: bold;
+    color: #ff014f; /* Neon pink color for contrast */
+    text-shadow: 2px 2px 10px rgba(255, 1, 79, 0.5);
+}
+
+/* Description and icon */
+.weather-card .description {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #e6fb04; /* Light neon color for contrast */
+}
+
+.weather-card img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Additional weather details (humidity, wind, etc.) */
+.weather-card .details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.weather-card .details div {
+    text-align: center;
+}
+
+.weather-card .details div p {
+    margin: 5px 0;
+    color: #00ff66; /* Neon green color for details */
+}
+
+
+ 
