@@ -1,0 +1,16 @@
+{
+  "name": "3rd-morden-js",
+  "version": "1.0.0",
+  "description": "This repository contains the source code for a weather API website. The application provides users with real-time weather information and forecasts for various locations. It leverages the [name of the weather API service] to fetch weather data and display it in a user-friendly interface.",
+  "main": "script.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
